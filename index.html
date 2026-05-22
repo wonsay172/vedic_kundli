@@ -3,7 +3,203 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: var(--font-sans); }
 
-.kundali-wrap { max-width: 680px; padding: 0 0 2rem; }
+/* =========================
+   RESPONSIVE MAIN CONTAINER
+========================= */
+
+.kundali-wrap{
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+  padding:1rem;
+}
+
+/* =========================
+   RESPONSIVE SVG CHART
+========================= */
+
+.responsive-chart{
+  width:100%;
+  max-width:260px;
+  height:auto;
+  display:block;
+  margin:auto;
+}
+
+/* =========================
+   TABLE RESPONSIVE FIX
+========================= */
+
+.section-body{
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  min-width:600px;
+}
+
+/* =========================
+   LAPTOP / DESKTOP IMPROVEMENTS
+========================= */
+
+@media (min-width:1200px){
+
+  .kundali-wrap{
+    max-width:1600px;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .section-body{
+    padding:1.5rem;
+  }
+
+  table{
+    font-size:14px;
+  }
+}
+
+/* =========================
+   TABLET & MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+  .kundali-wrap{
+    padding:12px;
+  }
+
+  .hero{
+    padding:1rem;
+  }
+
+  .hero h1{
+    font-size:18px;
+    line-height:1.4;
+  }
+
+  .hero p{
+    font-size:12px;
+  }
+
+  .hero-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+  }
+
+  .hero-card{
+    padding:8px;
+  }
+
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .grid-3{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .tabs{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:6px;
+    scrollbar-width:none;
+  }
+
+  .tabs::-webkit-scrollbar{
+    display:none;
+  }
+
+  .tab-btn{
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+
+  .chart-title{
+    font-size:14px;
+  }
+
+  table{
+    font-size:12px;
+    min-width:500px;
+  }
+
+  table thead th{
+    padding:6px;
+  }
+
+  table tbody td{
+    padding:6px;
+  }
+
+  .planet-row{
+    align-items:flex-start;
+  }
+
+  .planet-symbol{
+    width:28px;
+    height:28px;
+    font-size:12px;
+  }
+
+  .prediction-card,
+  .warning-box,
+  .positive-box,
+  .remedy-card,
+  .final-card{
+    padding:10px;
+  }
+
+  .year-header{
+    font-size:13px;
+    line-height:1.4;
+  }
+
+  .nakshatra-card h3,
+  .final-destiny h3{
+    font-size:13px;
+  }
+
+  .nakshatra-card p,
+  .final-destiny p{
+    font-size:12px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:16px;
+  }
+
+  .section-header h2{
+    font-size:13px;
+  }
+
+  .tab-btn{
+    font-size:11px;
+    padding:5px 10px;
+  }
+
+  table{
+    min-width:450px;
+  }
+}
 
 .hero { background: linear-gradient(135deg, #1a0533 0%, #2d0f5e 50%, #1a0533 100%); border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; color: white; text-align: center; }
 .hero h1 { font-size: 22px; font-weight: 500; margin-bottom: 4px; color: #f0d080; }
@@ -115,11 +311,11 @@ table tbody tr:hover { background: var(--color-background-secondary); }
 .mini-card .mc-value { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
 .mini-card .mc-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .hero-grid { grid-template-columns: repeat(2, 1fr); }
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
-}
+} */
 </style>
 
 <div class="kundali-wrap">
@@ -145,7 +341,9 @@ table tbody tr:hover { background: var(--color-background-secondary); }
   <div class="chart-title">North Indian Kundali Chart (Lagna Chart)</div>
   <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start; justify-content:center;">
     <div>
-      <svg width="260" height="260" viewBox="0 0 260 260" style="display:block;">
+      <!-- <svg width="260" height="260" viewBox="0 0 260 260" style="display:block;">-->
+      <svg  viewBox="0 0 260 260" class="responsive-chart" style="display:block;">
+       <!-- <svg viewBox="0 0 260 260" class="responsive-chart"> -->
         <rect x="1" y="1" width="258" height="258" fill="none" stroke="#7060a0" stroke-width="1"/>
         <line x1="1" y1="1" x2="130" y2="130" stroke="#7060a0" stroke-width="0.7"/>
         <line x1="259" y1="1" x2="130" y2="130" stroke="#7060a0" stroke-width="0.7"/>
