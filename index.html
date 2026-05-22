@@ -1,7 +1,27 @@
 
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font-sans); }
+/* body { font-family: var(--font-sans); } */
+   body{
+  font-family: var(--font-sans);
+  background:url('background.gif') center center/cover no-repeat fixed;
+  min-height:100vh;
+  position:relative;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:-1;
+}
+   .section,
+.kundali-chart,
+.hero{
+  backdrop-filter: blur(10px);
+  background: rgba(20,20,30,0.75);
+}
 
 /* =========================
    RESPONSIVE MAIN CONTAINER
