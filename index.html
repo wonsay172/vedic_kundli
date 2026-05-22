@@ -336,6 +336,50 @@ table tbody tr:hover { background: var(--color-background-secondary); }
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
 } */
+
+/* =========================
+   TEXT VISIBILITY IMPROVEMENT
+========================= */
+
+.hero h1,
+.hero p,
+.chart-title,
+.section-header h2,
+table,
+table td,
+table th,
+p,
+span,
+div,
+h3,
+h2{
+  color:#ffffff !important;
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.4),
+    0 0 10px rgba(255,255,255,0.2);
+}
+
+
+   .section,
+.kundali-chart,
+.hero,
+.prediction-card,
+.warning-box,
+.positive-box,
+.remedy-card,
+.final-card,
+.nakshatra-card,
+.mini-card{
+  background:rgba(20,20,30,0.78) !important;
+  backdrop-filter:blur(12px);
+}
+
+   table tbody tr:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+
+   
 </style>
 
 <div class="kundali-wrap">
